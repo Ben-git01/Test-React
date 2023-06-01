@@ -1,26 +1,18 @@
 
 
-function PokemonCard(props) {
-    console.log(props);
-    let pokemon = {
-        nom: props.name,
-        imgSrc: props.imgSrc
-    };
-
-
-
-
-
-    return (
+function PokemonCard({pokemon}) {
+    console.log(pokemon);
+   
+  return (
 
 
         <figure>
             {pokemon.imgSrc ? (
-                <img src={pokemon.imgSrc} alt={pokemon.nom} />
+                <img src={pokemon.imgSrc} alt={pokemon.name} />
             )
                 : (<p> ??? </p>)
             }
-            <figcaption>{pokemon.nom}</figcaption>
+            <figcaption>{pokemon.name}</figcaption>
 
         </figure>
     )
