@@ -20,7 +20,7 @@ function PokemonCard({pokemon}) {
 }
 
 
-export default PokemonCard;
+
 
 PokemonCard.propTypes = {
     pokemon: PropTypes.shape({
@@ -29,3 +29,4 @@ PokemonCard.propTypes = {
     }).isRequired,
 }
 
+export default PokemonCard;
