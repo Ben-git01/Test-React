@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function PokemonCard({pokemon}) {
 
-    console.log(pokemon);
+    // console.log(pokemon);
    
     return (
 
