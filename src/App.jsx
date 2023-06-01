@@ -1,20 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import PokemonCard from './components/PokemonCard'
-
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <PokemonCard name={pokemonList[1].name} imgSrc={pokemonList[1].imgSrc} />
-    </>
-  )
-}
-
-export default App
 
 const pokemonList = [
 
@@ -30,8 +16,57 @@ const pokemonList = [
 
   {
 
+    name: "charmander",
+
+    imgSrc:
+
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
+
+  },
+
+  {
+
+    name: "squirtle",
+
+    imgSrc:
+
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+
+  },
+
+  {
+
+    name: "pikachu",
+
+    imgSrc:
+
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
+
+  },
+
+  {
+
     name: "mew",
 
   },
 
 ];
+
+function App() {
+
+  const [pokemonIndex, setPokemonIndex] = useState(0);
+
+  const handleClickPrevious = () =>{};
+
+  const handleClickNext = () => {};
+
+  return (
+    <>
+      <PokemonCard pokemon={pokemonList[0]} />
+      <button  onClick={handleClickPrevious}> Précédent </button> <button onClick={handleClickNext}>Suivant</button> 
+    </>
+  )
+}
+
+export default App
+
