@@ -1,17 +1,24 @@
 // import PropTypes from "prop-types";
 // import { useState } from 'react';
 
-const  NavBar = ({pokemonIndex,  pokemonList, handleClickNext, handleClickPrevious}) => {
+const  NavBar = ({state,  pokemonList, }) => {
     
+  const [pokemonIndex, setPokemonIndex] = state;
 
-
+    
     return(
         <>
-        { pokemonIndex > 0 ? <button onClick={handleClickPrevious}  > Previous </button> : null }
-
-        { pokemonIndex < pokemonList.length -1 ? <button onClick={handleClickNext}> Next </button> : null }
+           {pokemonList.map((pokemon, index)=>(
+            
+            <button key={index} onClick={()=>setPokemonIndex(index) }> {pokemon.name}  </button>
+            
+            
+           ))}
+           
+  
         </>
     )
+    
 }
 
 
